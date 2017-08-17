@@ -1,0 +1,16 @@
+allbrexit:
+select time, open, high, low, close
+from gbptousd
+where time between TIMESTAMP('2016-06-23') and TIMESTAMP('2016-06-25');
+
+maxclose:
+select max(close) from gbptousd
+where time between TIMESTAMP('2016-06-23') and TIMESTAMP('2016-06-25');
+
+minclose:
+select MIN(close) from gbptousd
+where time between TIMESTAMP('2016-06-23') and TIMESTAMP('2016-06-25');
+
+maxclose/minclose:
+select max(close) / MIN(close) from gbptousd
+where time between TIMESTAMP('2016-06-23') and TIMESTAMP('2016-06-25');
